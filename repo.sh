@@ -1,8 +1,19 @@
+#!/bin/bash
+
+# Remove existing index files
 rm -rf Packages Packages.bz2 Packages.gz Packages.zst Release
-dpkg-scanpackages -m debs > Packages
+
+# Scan packages and create index files
+dpkg-scanpackages -m debs/rootless > Packages
+dpkg-scanpackages -m debs/rootfull >> Packages
+dpkg-scanpackages -m debs/themes >> Packages
+
+# Compress index files
 bzip2 -k Packages
 gzip -k Packages
 zstd -19 Packages
+
+# Copy Base Release
 cp Base Release
 
 # Calculate sizes and hashes using SHA-512
