@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: rgba(42, 50, 51, 0.51);
+            background-color: rgba(89, 105, 107, 0.51);
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 100vh;
@@ -77,6 +77,20 @@
         #truechara {
             margin-bottom: 20px;
         }
+
+        #note {
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: rgb(201, 33, 33);
+        }
+
+        #contact {
+            font-size: large;
+            font-family: 'Arial, Helvetica, sans-serif';
+            font-weight: bold;
+            color: rgb(13, 20, 232);
+        }
     </style>
 </head>
 
@@ -84,7 +98,8 @@
     <div>
         <img id="truechara" class="centre" src="images/truechara.webp" height="150px" width="150px">
         <p id="dialogue"></p>
-        <p id="introText">Hey, I am Kaizer. My repo is <a href="https://pickyone.github.io/kaizer/" target="_blank">https://pickyone.github.io/kaizer/</a></p>
+        <p id="introText">Hey, I am Kaizer. My repo is <a href="https://pickyone.github.io/kaizer/"
+                target="_blank">https://pickyone.github.io/kaizer/</a></p>
         <p id="thanksText">Thanks to all developers for their contributions.</p>
         <div id="repoDiv">
             <a class="udtButton" onclick="buttonHandler('cydia')">CYDIA</a>
@@ -92,6 +107,11 @@
             <a class="udtButton" onclick="buttonHandler('sileo')">SILEO</a>
             <a class="udtButton" onclick="buttonHandler('zebra')">ZEBRA</a>
         </div>
+
+        <p id="note">Note : Neither me nor this repo is responsible for any tweak cracking. Only we do is post the all
+            tweaks from another repos and convert the rootless into rootfull and vice versa so that you need not to add
+            20-30 repos for tweaks. </p>
+        <p id="contact">Contact me :<br> Twitter : @Lucifer_085</p>
     </div>
 
     <script>
