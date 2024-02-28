@@ -2,7 +2,7 @@
     "minVersion": "0.1",
     "class": "DepictionTabView",
     "tintColor": "#CBA0DD",
-    "headerImage": "https://paisseon.github.io/images/LiaDive.png",
+    "headerImage": "https://pickyone.github.io/kaizer/images/LiaDive.png",
     "tabs": [
         {
             "tabname": "Details",
@@ -79,7 +79,7 @@
                         {
                             "class": "DepictionTableButtonView",
                             "title": "Source Code",
-                            "action": "https://github.com/Paisseon/Xinamine",
+                            "action": "https://pickyone.github.io/kaizer/Xinamine",
                             "openExternal": true
                         },
                         {
