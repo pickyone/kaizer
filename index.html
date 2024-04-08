@@ -3,98 +3,127 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Flame || Tweaks Repo</title>
-
+    <meta name="description" content="Flame Tweaks Repo offers the best Discord servers, iOS jailbreak tweaks, IPA world, and more. Explore now!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Tweaks Repo | Best Discord Servers, iOS Jailbreak, IPA World</title>
     <style>
-        @font-face {
-            font-family: 'Determination';
-            src: url('fonts/Determination.woff2') format('woff2'),
-                url('fonts/Determination.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         body {
-            background-color: rgba(89, 105, 107, 0.51);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 100vh;
-            align-items: center;
-            justify-items: center;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
+            font-family: Arial, sans-serif;
+            background-color: #ffc300; /* Yellow background */
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in-out;
+            overflow: hidden; /* Prevent horizontal scroll */
         }
 
         @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
             to {
                 opacity: 1;
             }
         }
 
-        p {
-            color: rgb(90, 48, 116);
-            font-family: Determination;
+        /* Loading animation styles */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.3s;
         }
 
-        div {
+        .loading-text {
+            font-size: 24px;
+            margin-top: 20px;
             text-align: center;
         }
 
-        .udtButton {
-            display: inline-block;
+        header {
+            background-color: #333;
+            color: #fff;
             padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main {
+            padding: 20px;
+            display: none; /* Hide the main content initially */
+        }
+
+        .diagonal-stripe {
+            position: fixed;
+            width: 300%;
+            height: 300%;
+            background-image: linear-gradient(45deg, transparent 50%, #bfbfbf 50%);
+            transform: rotate(-45deg);
+            animation: moveStripe 5s linear 1 forwards;
+        }
+
+        @keyframes moveStripe {
+            0% {
+                transform: rotate(-45deg) translate(-50%, -50%);
+            }
+            100% {
+                transform: rotate(-45deg) translate(150%, 150%);
+            }
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
-            color: white;
-            background-color: #555252;
-            border: 1px solid #888;
+            color: #fff;
+            background-color: #333;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        .udtButton:hover {
-            color: black;
-            background-color: rgb(89, 153, 172);
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        .button:hover {
+            background-color: #555;
         }
 
-        #dialogue {
-            color: rgb(254, 242, 0) !important;
-            margin-bottom: 20px;
-        }
-
-        #introText {
-            color: rgba(14, 59, 43, 0.712);
-            margin-bottom: 20px;
-        }
-
-        #thanksText {
-            color: rgb(38, 96, 161);
-            margin-bottom: 20px;
-        }
-
-        #truechara {
-            margin-bottom: 20px;
-        }
-
-        #note {
-            font-size: large;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            color: rgb(201, 33, 33);
-        }
-
-        #contact {
-            font-size: large;
-            font-family: 'Arial, Helvetica, sans-serif';
-            font-weight: bold;
-            color: rgb(13, 20, 232);
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
 
 <body>
+    <div class="visme_d" data-title="Untitled Project" data-url="4d74xyqk-untitled-project" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="44813"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
     <div>
         <img id="truechara" class="centre" src="images/truechara.webp" height="150px" width="150px">
         <p id="dialogue"></p>
@@ -114,58 +143,57 @@
         <p id="contact">Contact me :<br> Twitter : @Lucifer_085</p>
     </div>
 
+    <div class="diagonal-stripe"></div>
+
+    <header>
+        <h1>Welcome to Flame Tweaks Repo</h1>
+        <p>Discover the best Discord servers, iOS jailbreak tweaks, IPA world, and more.</p>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>About Flame Tweaks Repo</h2>
+            <p>Flame Tweaks Repo, curated by Kaizer, offers a collection of the latest and most popular tweaks for your iOS devices. Our repository provides a seamless experience for users looking to enhance their devices with new functionalities and customizations.</p>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Free Apple ID Password Sharing</li>
+                <li>iOS Jailbreak and Tweaks</li>
+                <li>Discord Servers for Fun and Entertainment</li>
+                <li>Cracked IPA Downloads</li>
+                <li>IPhone Jailbreak Resources</li>
+                <li>Exclusive Discord Bots</li>
+            </ul>
+        </section>
+
+        <section id="buttons">
+            <h2>Download Options</h2>
+            <a class="button" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://pickyone.github.io/kaizer/">Cydia</a>
+            <a class="button" href="installer://add/https://pickyone.github.io/kaizer/">Installer</a>
+            <a class="button" href="sileo://source/https://pickyone.github.io/kaizer/">Sileo</a>
+            <a class="button" href="zbra://sources/add/https://pickyone.github.io/kaizer/">Zebra</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Flame Tweaks Repo. All rights reserved.</p>
+    </footer>
+
     <script>
-        // References to the HTML elements
-        const dialogue = document.getElementById('dialogue');
-        const introText = document.getElementById('introText');
-        const thanksText = document.getElementById('thanksText');
-        const truechara = document.getElementById('truechara');
-        const repoDiv = document.getElementById('repoDiv');
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainContent = document.querySelector("main");
 
-        // Track current character and line
-        let i = 0;
-        let line = 'All the tweaks uploaded in my repo will be developed by others, you can see their author name below the tweak name in the package manager. All credit goes to them. ';
-
-        // Print text to the screen
-        function charaText() {
-            if (i < line.length) {
-                dialogue.innerHTML += line.charAt(i);
-                i++;
-                setTimeout(charaText, 130);
-            } else {
-                // Show buttons after text is complete
-                repoDiv.style = '';
-            }
-        }
-
-        // React to user clicking on the "buttons"
-        function buttonHandler(app) {
-            let link;
-            switch (app) {
-                case 'cydia':
-                    link = 'cydia://url/https://cydia.saurik.com/api/share#?source=https://pickyone.github.io/kaizer/';
-                    break;
-                case 'installer':
-                    link = 'installer://add/https://pickyone.github.io/kaizer/';
-                    break;
-                case 'sileo':
-                    link = 'sileo://source/https://pickyone.github.io/kaizer/';
-                    break;
-                case 'zebra':
-                    link = 'zbra://sources/add/https://pickyone.github.io/kaizer/';
-                    break;
-                default:
-                    break;
-            }
-
-            // Open the link
-            window.location.href = link;
-        }
-
-        // Display intro text and initiate text animation
-        charaText();
+            setTimeout(function () {
+                document.querySelector(".loader-overlay").style.opacity = "0";
+                setTimeout(function () {
+                    document.querySelector(".loader-overlay").style.display = "none";
+                    mainContent.style.display = "block"; // Show main content after loading
+                }, 300); // Hide the overlay after the transition ends
+            }, 200); // Simulate faster loading time (0.2 seconds)
+        });
     </script>
-
 </body>
 
 </html>
